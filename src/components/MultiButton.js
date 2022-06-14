@@ -7,9 +7,12 @@ function MultiButton() {
 
   return (
     <div>
-      <button onClick={handleClick}>Button 1</button>
-      <button onClick={handleClick}>Button 2</button>
-      <button onClick={handleClick}>Button 3</button>
+      {/*By writing out arrow functions,
+       we're providing each of our buttons onClick handlers,
+       a function definition that will only be invoked when the button is clicked*/}
+      <button onClick={() => handleClick(1)}>Button 1</button>
+      <button onClick={() => handleClick(2)}>Button 2</button>
+      <button onClick={() => handleClick(3)}>Button 3</button>
     </div>
   );
 }
